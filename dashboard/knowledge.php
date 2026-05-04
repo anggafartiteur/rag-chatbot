@@ -5,14 +5,14 @@ $pageTitle = 'Knowledge Base';
 
 $vectorDir  = dirname(__DIR__) . '/' . ltrim($_ENV['VECTOR_STORE_DIR'] ?? './storage/vectors', './');
 $vectorName = $_ENV['VECTOR_STORE_NAME'] ?? 'knowledge_base';
-$vectorFile = $vectorDir . '/' . $vectorName . '.json';
+$vectorFile = $vectorDir . '/' . $vectorName . '.store';
 
 $flash = '';
 
 // Hapus semua
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'clear_all') {
     if (file_exists($vectorFile)) {
-        file_put_contents($vectorFile, json_encode([]));
+        unlink($vectorFile);
         $flash = 'success:Semua chunks berhasil dihapus.';
     }
     header('Location: knowledge.php?flash=' . urlencode($flash)); exit;
@@ -20,11 +20,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'clear
 
 if (isset($_GET['flash'])) $flash = $_GET['flash'];
 
-// Load chunks
+// Load chunks - format NDJSON (satu JSON object per baris)
 $chunks = [];
 if (file_exists($vectorFile)) {
-    $data = json_decode(file_get_contents($vectorFile), true);
-    if (is_array($data)) $chunks = $data;
+    $lines = file($vectorFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        $obj = json_decode($line, true);
+        if ($obj) $chunks[] = $obj;
+    }
 }
 
 // Pagination
@@ -81,9 +84,8 @@ require_once __DIR__ . '/includes/header.php';
             </tr></thead>
             <tbody>
             <?php foreach ($pageChunks as $i => $chunk):
-                $content  = $chunk['document']['content'] ?? $chunk['content'] ?? '';
-                $metadata = $chunk['document']['metadata'] ?? $chunk['metadata'] ?? [];
-                $source   = $metadata['source'] ?? $metadata['file'] ?? '-';
+                $content  = $chunk['content'] ?? '';
+                $source   = $chunk['sourceName'] ?? '-';
                 $preview  = mb_substr(strip_tags($content), 0, 180);
                 if (mb_strlen($content) > 180) $preview .= '…';
             ?>

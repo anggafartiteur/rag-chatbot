@@ -34,7 +34,10 @@ if (empty($sources)) {
     exit;
 }
 
-$bot         = ChatBot::make();
+// Override VECTOR_STORE_DIR ke path absolut dari root project
+$_ENV['VECTOR_STORE_DIR'] = dirname(__DIR__) . '/storage/vectors';
+
+$bot = ChatBot::make();
 $totalChunks = 0;
 $messages    = [];
 

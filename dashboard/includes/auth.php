@@ -8,6 +8,7 @@ function requireLogin(): void {
 }
 
 function isLoggedIn(): bool {
+    
     if (session_status() === PHP_SESSION_NONE) session_start();
     return !empty($_SESSION['user_id']);
 }
