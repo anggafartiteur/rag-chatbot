@@ -6,339 +6,355 @@ Kemindo Group menyediakan produk kimia berkualitas tinggi untuk industri Mining,
 
 ## Sulfuric Acids - H2SO4
 
-- **Kategori:** Chemical, Mining Chemical, Nickel, Gold Mine
-- **URL:** https://kemindogroup.com/products/sulfuric-acids-h2so4
+**Kategori:** Chemical, Mining Chemical, Nickel, Gold Mine
 
 Sulfuric Acid (H₂SO₄) is a highly concentrated, strong mineral acid commonly used across a wide range of industries including chemical manufacturing, fertilizers, petroleum refining, wastewater treatment, and metal processing. This high-purity product ensures excellent performance and consistency in industrial applications.
 
-| Parameter | Specification |
-| --- | --- |
-| Purity | Min 98.00% |
-| Specific Gravity | Min 1.800 |
-| Iron (Fe) Content | Max 40 ppm |
-| Packing Options | Supplied in Drums, Intermediate Bulk Containers (IBCs), and ISO Tank |
-Our Sulfuric Acid is manufactured and packaged under strict quality standards, ensuring maximum safety and effectiveness for your industrial needs.
+**Spesifikasi:**
+- Purity: Min 98.00%
+- Specific Gravity: Min 1.800
+- Iron (Fe) Content: Max 40 ppm
+- Packing: Drums, Intermediate Bulk Containers (IBCs), ISO Tank
 
 ---
 
 ## Sulphur - Granular
 
-- **Kategori:** Chemical, Mining Chemical, Nickel
-- **URL:** https://kemindogroup.com/products/sulphur-granular
+**Kategori:** Chemical, Mining Chemical, Nickel
 
-| No | Parameter | Speficitaion |
-| --- | --- | --- |
-| 1 | Putiry | 99.90% Min |
-| 2 | Ash | 0.06% Max |
-| 3 | Moisture | 0.40% Max |
-| 4 | Packing | In Bulk, In Bags |
+**Spesifikasi:**
+- Purity: 99.90% Min
+- Ash: 0.06% Max
+- Moisture: 0.40% Max
+- Packing: In Bulk, In Bags
+
 ---
 
 ## Aluminum Powder
 
-- **Kategori:** Chemical, Mining Chemical, Nickel
-- **URL:** https://kemindogroup.com/products/aluminum-powder
+**Kategori:** Chemical, Mining Chemical, Nickel
 
-| No | Parameter | Specification |
-| --- | --- | --- |
-| 1 | Al2O3 Content | 17% Min |
-| 2 | Ferro Oxide Fe2O3 | 15.0 ppm Max |
-| 3 | Lead (Pb) | 0.2 ppm Max |
-| 4 | Arsenic (As) | 0.005 ppb Max |
-| 5 | pH solution at 25C | 2.06 |
+**Spesifikasi:**
+- Al2O3 Content: 17% Min
+- Ferro Oxide Fe2O3: 15.0 ppm Max
+- Lead (Pb): 0.2 ppm Max
+- Arsenic (As): 0.005 ppb Max
+- pH solution at 25°C: 2.06
+
 ---
 
 ## Aluminum Sulfate Liquid
 
-- **Kategori:** Chemical, Mining Chemical
-- **URL:** https://kemindogroup.com/products/aluminum-sulfate-liquid
+**Kategori:** Chemical, Mining Chemical
 
-Aluminum sulphate liquid, commonly referred to as alum, is a chemical compound with the formula Al₂(SO₄)₃. It is a white, crystalline solid that is highly soluble in water and forms a solution with an acidic pH. This compound is primarily used as a coagulating agent in water treatment processes, where it helps to remove impurities and contaminants from water, making it safe for consumption and industrial use.
+Aluminum sulphate liquid (Al₂(SO₄)₃), commonly referred to as alum, is a white, crystalline solid that is highly soluble in water and forms a solution with an acidic pH. Primarily used as a coagulating agent in water treatment processes to remove impurities and contaminants.
 
-
-| Parameter | Specification |
-| --- | --- |
-| Al₂O₃ Content | 8% Min |
-| Ferro Oxide Fe₂O₃ | 8.0 ppm Max |
-| Lead (Pb) | 0.1 ppm Max |
-| Arsenic (As) | 0.002 ppb Max |
-| pH solution at 25C | 2.06 |
+**Spesifikasi:**
+- Al₂O₃ Content: 8% Min
+- Ferro Oxide Fe₂O₃: 8.0 ppm Max
+- Lead (Pb): 0.1 ppm Max
+- Arsenic (As): 0.002 ppb Max
+- pH solution at 25°C: 2.06
 
 ---
 
-## Calcium Carbride
+## Calcium Carbide
 
-- **Kategori:** Chemical, Mining Chemical, Nickel
-- **URL:** https://kemindogroup.com/products/calcium-carbride
+**Kategori:** Chemical, Mining Chemical, Nickel
 
-Our Calcium Carbide or know as Calcium Acetylide, is high purity, with consist of 80 - 85% of CaC2 and typical of Gas Yield above 300 l/kg. Suitable for Nickel application in Indonesia.
-| No | Parameter | Specification |
-| --- | --- | --- |
-| 1 | Purity | 79.00 % Min |
-| 2 | Gas Acetylene | 270 l/kg Min |
-| 3 | CaO | 11.20 % Max |
-| 4 | CaF2 | 3.02 % Max |
-| 5 | SiO2 | 2.90 % Max |
-| 6 | MgO | 0.35 % Max |
-| 7 | AI2O3 | 0.71% Max |
-| 8 | Size | 2 - 5 mm |
+High purity Calcium Carbide (CaC2), also known as Calcium Acetylide, with 80–85% CaC2 content and Gas Yield above 300 l/kg. Suitable for Nickel application in Indonesia.
+
+**Spesifikasi:**
+- Purity: 79.00% Min
+- Gas Acetylene: 270 l/kg Min
+- CaO: 11.20% Max
+- CaF2: 3.02% Max
+- SiO2: 2.90% Max
+- MgO: 0.35% Max
+- Al2O3: 0.71% Max
+- Size: 2–5 mm
+
 ---
 
 ## Electrode Paste
 
-- **Kategori:** Chemical, Mining Chemical, Nickel
-- **URL:** https://kemindogroup.com/products/electrode-paste
+**Kategori:** Chemical, Mining Chemical, Nickel
 
-**Electrode Paste - Our Strength:**
+Electrode Paste with lower ash content, accurate dosing, stable volatile content, good electric and thermal conductivity. High resistance to high temperature, oxidation and thermal shock, with low resistivity and high mechanical strength after sintering.
 
-1. Lower ash content.
+**Spesifikasi:**
+- Ash Content: 2–10% Max
+- Si: 0.28% Max
+- Fe: 0.25% Max
+- P: 0.00% Max
+- V.M: 10.0–15.0
+- Density: 1.46 g/cm³ Min
+- Compression Strength: 18 MPa Min
+- Resistivity: 55–90 μΩm
 
-2. Acurate dosing and stable volatile content.
-
-3. Good electric and thermal conductivity and the sintering speed appropriate to that of consumption of working end.
-
-4. Smelting at lower temperature with certain fluidity and homogeneous composition.
-
-5. High resistance to high temp, oxidation and thermal shock, low resistivity and high  mechanical strength after sintering.
-| No | Parameter | Specification |
-| --- | --- | --- |
-| 1 | Ash Content | 2 - 10% Max |
-| 2 | Si | 0.28% Max |
-| 3 | Fe | 0.25% Max |
-| 4 | P | 0.00% Max |
-| 5 | V.M | 10.0 - 15.0 |
-| 6 | Density | 1.46 g/cm3 Min |
-| 7 | Compression Strength | 18 Mpa Min |
-| 8 | Resistivity | 55 - 90 uΩm |
 ---
 
 ## Graphite Electrode
 
-- **Kategori:** Chemical, Mining Chemical
-- **URL:** https://kemindogroup.com/products/graphite-electrode
+**Kategori:** Chemical, Mining Chemical
+
+Graphite Electrode for industrial applications.
 
 ---
 
 ## Hydrated Lime - Ca(OH)2
 
-- **Kategori:** Chemical, Mining Chemical, Nickel
-- **URL:** https://kemindogroup.com/products/hydrated-lime
+**Kategori:** Chemical, Mining Chemical, Nickel
 
-Hydrated Lime, also known as Calcium Hydroxide [Ca(OH)₂], is a refined chemical compound widely used in water treatment, construction, mining, and environmental applications. Our high-purity Hydrated Lime ensures efficient performance across various industrial processes, offering consistent chemical quality and low impurity levels.
+Hydrated Lime, also known as Calcium Hydroxide [Ca(OH)₂], is a refined chemical compound widely used in water treatment, construction, mining, and environmental applications. Produced under strict quality control to ensure product consistency and low trace metal content.
 
-
-| Parameter | Specification |
-| --- | --- |
-| Ca(OH)₂ | 85 – 95% |
-| Magnesium Oxide [MgO] | 1.0 – 5.0% |
-| Silica Oxide [SiO₂] | 0.1 – 2.0% |
-| Iron Oxide [Fe₂O₃] | 0.01 – 0.1% |
-| Aluminium Oxide [Al₂O₃] | 0.1 – 1.0% |
-| pH (25℃ saturated water solution) | 12.44 |
-| Melting point/Freezing point | 580℃ (decomposition) |
-| Bulk density | 450 kg/m3 |
-| Relative Density / Specific Gravity | 2.2 – 2.3 g/cm3 (true) |
-Our Hydrated Lime is produced under strict quality control to ensure product consistency, low trace metal content, and excellent performance in industrial and environmental applications.
+**Spesifikasi:**
+- Ca(OH)₂: 85–95%
+- Magnesium Oxide (MgO): 1.0–5.0%
+- Silica Oxide (SiO₂): 0.1–2.0%
+- Iron Oxide (Fe₂O₃): 0.01–0.1%
+- Aluminium Oxide (Al₂O₃): 0.1–1.0%
+- pH at 25°C (saturated): 12.44
+- Melting Point: 580°C (decomposition)
+- Bulk Density: 450 kg/m³
+- Specific Gravity: 2.2–2.3 g/cm³
 
 ---
 
-## Low Cement Castables
+## Low Cement Castables (TSLC 75)
 
-- **Kategori:** Chemical, Mining Chemical, Nickel
-- **URL:** https://kemindogroup.com/products/low-cement-castables
+**Kategori:** Chemical, Mining Chemical, Nickel
 
-Low Cement Castable (LCC) is a type of refractory material used in high-temperature applications. It is a monolithic refractory product composed of fine and coarse aggregates, a binder system, and additives. As the name suggests, LCC contains a lower percentage of cement compared to traditional castables, typically less than 3% by weight. This reduction in cement content improves its performance characteristics, such as higher density, better thermal shock resistance, and reduced porosity.
+Low Cement Castable (LCC) is a monolithic refractory material used in high-temperature applications. Contains less than 3% cement by weight, offering higher density, better thermal shock resistance, and reduced porosity. Widely used in steel, cement, petrochemical, and power generation industries for furnaces, kilns, and ladles.
 
-Low Cement Castables are widely used in industries such as steel, cement, petrochemicals, and power generation, where they line furnaces, kilns, ladles, and other high-temperature equipment.
-
-
-| TSLC 75 |
-| --- |
-| Al₂O₃ | ≥ 75% |
-| SiO₂ | ≤ 20% |
-| CaO | ≤ 2.5% |
-| Fe₂O₃ | ≤ 1.5% |
-| Service Temp (℃) | ≥ 1700 |
-| Bulk Density g/cm3 (815℃) | ≥ 2.65 |
-| Cold Crushing Strength (Mpa) 815℃ | ≥ 70 |
-| Permanent Linear Change (%) 815℃ | ≥ -1.5% |
-| Max Grain Size | 8 mm |
-| Type of Installation | With Water/Vibration Flow, Pumpable, Self Flow |
-| Storage Period (dry, cool and no frost) | 10-12 month depending on the storage place and climate. |
-| Package | Kraft Paper Bag of 25 kg on Pallet (1250 kg) |
-| Setting time | Min. 1-4 hour |
-| Curing Time | Max. 24 hour |
+**Spesifikasi:**
+- Al₂O₃: ≥ 75%
+- SiO₂: ≤ 20%
+- CaO: ≤ 2.5%
+- Fe₂O₃: ≤ 1.5%
+- Service Temperature: ≥ 1700°C
+- Bulk Density at 815°C: ≥ 2.65 g/cm³
+- Cold Crushing Strength at 815°C: ≥ 70 MPa
+- Permanent Linear Change at 815°C: ≥ -1.5%
+- Max Grain Size: 8 mm
+- Type of Installation: With Water/Vibration Flow, Pumpable, Self Flow
+- Package: Kraft Paper Bag 25 kg on Pallet (1250 kg)
+- Setting Time: Min. 1–4 hours
+- Curing Time: Max. 24 hours
+- Storage Period: 10–12 months (dry, cool, no frost)
 
 ---
 
 ## Quick Lime - CaO
 
-- **Kategori:** Chemical, Mining Chemical, Nickel
-- **URL:** https://kemindogroup.com/products/quick-lime-cao
+**Kategori:** Chemical, Mining Chemical, Nickel
 
-Quick Lime, also known as Calcium Oxide (CaO), is a high-performance chemical compound extensively used in industries such as steel, mining, water treatment, and construction. It is valued for its high calcium content, strong reactivity, and efficiency in chemical processes such as pH regulation, flue gas treatment, and mineral processing.
+Quick Lime, also known as Calcium Oxide (CaO), is a high-performance chemical compound extensively used in steel, mining, water treatment, and construction. Valued for its high calcium content, strong reactivity, and efficiency in pH regulation, flue gas treatment, and mineral processing. Factory located in Sulawesi with consistent quality using European technology.
 
-
-| Parameter | Specification |
-| --- | --- |
-| Available CaO | Min 90% |
-| Magnesium Oxide (MgO) | Max 1.0% |
-| Silica Oxide [SiO₂] | Max 1.5% |
-| Loss on Ignition (LOI) | Max 4% |
-| Reactivity | Min 20 |
-| Lump Size | 20–70 mm |
-Our Quick Lime is produced using selected limestone and advanced calcination technology, resulting in consistent quality and optimal reactivity to meet the demands of critical industrial applications.
-
-**Our Strength :**
-
-- **Our factory** is in **Sulawesi**
-
-- **Quality consistent** with Europe Tech
-
-- **Sustainable **Supply
+**Spesifikasi:**
+- Available CaO: Min 90%
+- Magnesium Oxide (MgO): Max 1.0%
+- Silica Oxide (SiO₂): Max 1.5%
+- Loss on Ignition (LOI): Max 4%
+- Reactivity: Min 20
+- Lump Size: 20–70 mm
 
 ---
 
 ## Activated Carbon
 
-- **Kategori:** Chemical, Mining Chemical, Gold Mine
-- **URL:** https://kemindogroup.com/products/activated-carbon
+**Kategori:** Chemical, Mining Chemical, Gold Mine
 
-Activated Carbon
+Activated Carbon used in gold mining and water purification processes.
 
 ---
 
 ## Ion Exchange Resin
 
-- **Kategori:** Chemical, Mining Chemical, Nickel
-- **URL:** https://kemindogroup.com/products/ion-exchange-resin
+**Kategori:** Chemical, Mining Chemical, Nickel
+
+Ion Exchange Resin for industrial and mining applications.
 
 ---
 
 ## Caustic Soda Pearl
 
-- **Kategori:** Chemical, Mining Chemical, Gold Mine
-- **URL:** https://kemindogroup.com/products/caustic-soda-pearl
+**Kategori:** Chemical, Mining Chemical, Gold Mine
+
+Caustic Soda Pearl (NaOH) for mining and industrial applications.
 
 ---
 
 ## Caustic Soda Flake
 
-- **Kategori:** Chemical, Mining Chemical, Gold Mine
-- **URL:** https://kemindogroup.com/products/caustic-soda-flake
+**Kategori:** Chemical, Mining Chemical, Gold Mine
+
+Caustic Soda Flake (NaOH) for mining and industrial applications.
 
 ---
 
-## Copper Suphate
+## Copper Sulphate
 
-- **Kategori:** Chemical, Mining Chemical, Gold Mine
-- **URL:** https://kemindogroup.com/products/copper-sulphate
+**Kategori:** Chemical, Mining Chemical, Gold Mine
 
-Copper Sulphate® the factory of copper mine abundant in Russia. Quality product with very low Free Acid to maximize the performance in Mining application. Other impurities are very low as well, make our Copper Sulphate is widely use in Indonesia Gold Mine.
+Copper Sulphate Pentahydrate sourced from Russia with very low Free Acid content. Widely used in Indonesia Gold Mine. Competitive dosage and price with very low impurities.
 
-Dosage and Price is competitive or lower than in the market are the advantage of our Copper Sulphate.
-
-Copper Sulphate Pentahydrate
-
-
-| No | Parameter | Specification |
-| --- | --- | --- |
-| 1 | CuSO4.5H2O | Min 98 |
-| 2 | Cu | 24.95 (typical value > 25%) |
-| 3 | Free H2SO4 | Max 0.25 |
-| 4 | Fe | Max 0.04 |
-| 5 | As | Max 0.01 |
-| 6 | Water Insoluble | Max 0.05 |
-Our Strength :
-
-- Quality and Proven Products
-
-- Very Low impurities
-
-- Lowest Cost in the market
-
-- Any Pack Size available
+**Spesifikasi:**
+- CuSO4·5H2O: Min 98%
+- Cu: 24.95% (typical > 25%)
+- Free H2SO4: Max 0.25%
+- Fe: Max 0.04%
+- As: Max 0.01%
+- Water Insoluble: Max 0.05%
 
 ---
 
 ## Polymer - PAM
 
-- **Kategori:** Chemical, Others
-- **URL:** https://kemindogroup.com/products/polymer-pam
+**Kategori:** Chemical, Others
 
-Retention aids and water treatment :
+Polyacrylamide (PAM) for retention aids and water treatment. Available in Anionic, Cationic, and Nonionic types with various Molecular Weight and Charge. Available in Powder and Liquid Form.
 
-- Anionic Polyacrylamide
-- Cationic Polyacrylamide
-- Nonionic Polyacrylamide
-- Various MW and Charge
-- Powder and Liquid Form
 ---
 
 ## Hydrochloric Acid - HCL
 
-- **Kategori:** Chemical, Others
-- **URL:** https://kemindogroup.com/products/hydrochloric-acid-hcl
+**Kategori:** Chemical, Others
 
-Hydrochloric Acid (HCl) is a clear, highly corrosive, and pungent solution widely used in various industrial applications. This product is formulated to meet strict quality standards, making it ideal for use in chemical manufacturing, metal processing, water treatment, and other industrial sectors.
+Hydrochloric Acid (HCl) is a clear, highly corrosive solution widely used in chemical manufacturing, metal processing, and water treatment.
 
-
-| Parameter | Specification |
-| --- | --- |
-| HCl Content | Min 32.0% |
-| Iron (Fe) Content | Max 0.001% |
-| Specific Gravity at 28°C | Min 1.150 |
-| Appearance | Colorless and transparent or light yellow liquid |
-| Packing Options | Available in Drums, Intermediate Bulk Containers (IBCs), and Tank Trucks |
-Our Hydrochloric Acid is produced and handled under strict quality controls to ensure safety, purity, and performance consistency.
+**Spesifikasi:**
+- HCl Content: Min 32.0%
+- Iron (Fe) Content: Max 0.001%
+- Specific Gravity at 28°C: Min 1.150
+- Appearance: Colorless/light yellow liquid
+- Packing: Drums, IBC, Tank Trucks
 
 ---
 
 ## Palm Kernel Expeller - PKE
 
-- **Kategori:** Chemical, Agriculture, Others
-- **URL:** https://kemindogroup.com/products/palm-kernel-expeller-pke
+**Kategori:** Chemical, Agriculture, Others
 
-Palm Kernel Expeller contains fat, fiber, protein and mineral and make it a nutritious feed for livestock. PKE also  has a high phosphorus to calcium ratio, which is important for healthy bone and teeth formation and biochemical cycles.
+Palm Kernel Expeller (PKE) is a by-product of the palm oil extraction process, containing fat, fiber, protein, and minerals. A nutritious feed for livestock with high phosphorus to calcium ratio. Kemindo works with more than 10 Palm Oil Mills in Riau and North Sumatra.
 
-PKE is  by-product of the palm oil extraction process from the fruit of the palm. As Kemindo group is active in Palm Oil industry, we work with more than 10 Palm Oil Mills in Riau and North Sumatra to produce Palm Kernel Expeller.
+**Spesifikasi:**
+- Color: Brown
+- Protein: Min 13%
+- Fat: Min 15%
+- Raw Fiber: Max 15%
+- Impurities: Max 15%
+- Moisture: Max 10%
 
-Typical specification of PKE :
-
-- Color: brown
-- Protein min. 13 %
-- Fat min. 15 %
-- Raw fiber max 15 %
-- Impurities max 15%
-- Moisture max. 10%
 ---
 
 ## STARFIX
 
-- **Kategori:** Chemical, Others
-- **URL:** https://kemindogroup.com/products/starfix-lch
+**Kategori:** Chemical, Others
 
-- Liquid Form, Very Low Fe2+ content
+STARFIX is a liquid coagulant solution with very low Fe2+ content, Potable Water Grade. Al2O3 content ranges from 10% to 24% with Low Residual Aluminium.
 
-- Potable Water Grade
-
-- Al2O3 content = 10% to 24%
-
-- Low Residual Aluminium
+**Spesifikasi:**
+- Form: Liquid
+- Al2O3 Content: 10%–24%
+- Fe2+ Content: Very Low
+- Grade: Potable Water Grade
+- Residual Aluminium: Low
 
 ---
 
 ## Crude Palm Oil
 
-- **Kategori:** Agriculture
-- **URL:** https://kemindogroup.com/products/crude-palm-oil
+**Kategori:** Agriculture
 
-Kemindo is also carries out export and buying/selling activities of Palm Oil. We are serving a high quality of any product from Palm Oil. The product we sell:
+Kemindo carries out export and trading activities of Palm Oil products. Active buyer of CPO in Dumai with large storage facility and long-term contracts with many Palm Oil Mills.
 
+**Produk tersedia:**
 - Crude Palm Oil
 - Palm Acid Oil
 - Palm Oil Mill Effluent
 - High Free Fatty Acid
-- etc
+
 ---
 
+## Sodium Metabisulfite
+
+**Kategori:** Chemical
+
+Sodium Metabisulfite (Na₂S₂O₅) is a white crystalline powder with preservative, antioxidant, and disinfectant properties. Used in food preservation, water treatment, and various industrial applications.
+
+**Spesifikasi:**
+- Na₂S₂O₅: ≥ 96.5%
+- Fe: ≤ 0.005%
+- Water Insoluble: ≤ 0.05%
+- Arsenic (As): ≤ 0.0001%
+- Heavy Metal (Pb): ≤ 0.0005%
+- pH: 4.0–5.0
+- SO2: ≥ 65%
+- Appearance: White to slightly yellowish crystalline powder
+
+---
+
+## Ferrous Sulphate HeptaHydrate
+
+**Kategori:** Chemical
+
+Ferrous Sulphate Heptahydrate (FeSO₄·7H₂O) appears as blue-green crystals and is highly soluble in water. Used as a reducing agent, iron source, in water treatment, and agriculture. High Fe²⁺ content (min 19%) ensures better coagulation efficiency with low contaminant levels.
+
+**Spesifikasi:**
+- Appearance: Blue-Green crystals
+- FeSO₄·7H₂O: ≥ 98.13%
+- Fe: ≥ 19.7%
+- Sulphur (S): 10.5% Min
+- pH (1% solution): ≥ 3.5
+- Moisture: 1.5% Max
+- Titanium Dioxide: ≤ 0.25%
+- Free Acid (HCl): ≤ 1%
+- Arsenic (As): ≤ 0.0004%
+- Lead (Pb): ≤ 0.002%
+- Cadmium (Cd): ≤ 0.0005%
+
+---
+
+## Ferric Sulphate
+
+**Kategori:** Chemical
+
+Ferric Sulphate (Fe₂(SO₄)₃) is a yellowish-brown crystalline powder widely used as a coagulant, flocculant, and oxidizing agent in water treatment, industrial processes, and environmental applications.
+
+**Spesifikasi:**
+- Fe³⁺: 21.5% Min
+- Reduced matter (Fe²⁺): 0.1% Max
+- Free Acid: 0.5% Max
+- Insoluble Material: 0.3% Max
+- Appearance: Yellow powder
+
+---
+
+## Aluminum Sulfate
+
+**Kategori:** Chemical
+
+Aluminum Sulfate (Al₂(SO₄)₃·xH₂O) is a white crystalline flake highly soluble in water. Widely used in water treatment and paper manufacturing.
+
+**Spesifikasi:**
+- Al₂O₃ Content: 17% Min
+- Arsenic (As): 0.005 ppb Max
+- pH solution at 25°C: 2.06
+
+---
+
+## Sodium Hydroxide Pearl
+
+**Kategori:** Chemical
+
+Sodium Hydroxide Pearl (NaOH) with min 99% purity, used in chemical manufacturing, soap and detergent production, water treatment, and petroleum refining.
+
+**Spesifikasi:**
+- Sodium Hydroxide (NaOH): Min 99%
+- Sodium Carbonate (Na₂CO₃): Max 0.5%
+- Sodium Chloride (NaCl): Max 0.03%
+- Sodium Sulfate (Na₂SO₄): Max 0.03%
+- Iron Oxide (Fe₂O₃): Max 0.001%
+
+---
