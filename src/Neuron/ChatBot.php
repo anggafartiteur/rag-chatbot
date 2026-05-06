@@ -96,6 +96,9 @@ class ChatBot extends RAG
         }
 
         $background[] = "Gunakan informasi dari knowledge base yang tersedia untuk menjawab pertanyaan.";
+        $background[] = "Jika user menanyakan harga, negosiasi harga, ketersediaan produk di luar list, atau permintaan khusus lainnya, kumpulkan informasi berikut secara natural satu per satu: nama lengkap, nomor WhatsApp, alamat email, nama perusahaan, dan kebutuhan spesifik mereka.";
+        $background[] = "Setelah semua informasi terkumpul, konfirmasi ke user bahwa informasi mereka akan diteruskan ke tim sales Kemindo dan tim sales akan menghubungi mereka segera.";
+        $background[] = "Jangan menjanjikan harga atau ketersediaan produk secara spesifik. Arahkan selalu ke tim sales untuk negosiasi.";
 
         $unknownBehavior = $s['unknown'] ?? 'honest';
         if ($unknownBehavior === 'honest') {

@@ -130,6 +130,16 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
         <a href="<?= BASE_URL ?>/index.html" target="_blank" class="nav-link">
             <i class="bi bi-chat-dots"></i> Buka Chatbot
         </a>
+        <a href="<?= BASE_URL ?>/dashboard/leads.php" class="nav-link <?= $currentPage==='leads'?'active':'' ?>">
+            <i class="bi bi-people"></i> Leads
+            <?php
+            // Badge untuk new leads
+            try {
+                $newLeads = getDB()->query("SELECT COUNT(*) FROM leads WHERE status='new'")->fetchColumn();
+                if ($newLeads > 0) echo '<span class="badge bg-warning ms-auto">' . $newLeads . '</span>';
+            } catch(Exception $e) {}
+            ?>
+        </a>
         <a href="<?= BASE_URL ?>/dashboard/account.php" class="nav-link <?= $currentPage==='account'?'active':'' ?>">
             <i class="bi bi-person-circle"></i> Akun
         </a>
