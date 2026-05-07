@@ -1,4 +1,7 @@
 <?php
+date_default_timezone_set('Asia/Jakarta');
+ini_set('error_log', 'C:/xampp/htdocs/rag-chatbot/debug.log');
+ini_set('log_errors', '1');
 require_once __DIR__ . '/vendor/autoload.php';
 
 use App\Neuron\ChatBot;
@@ -75,6 +78,7 @@ try {
 
     $response = $bot->chat($messages)->getMessage();
     $replyText   = $response->getContent();
+    file_put_contents(__DIR__ . '/debug.log', date('H:i:s') . ' REPLY: ' . substr($replyText, 0, 200) . "\n", FILE_APPEND);
 
     // Simpan ke history
     $history[] = ['role' => 'user',      'content' => $userMessage];
@@ -101,12 +105,16 @@ try {
 
         $replyLower = mb_strtolower($replyText);
         $triggered  = false;
+        error_log('Trigger check: ' . $replyLower);
+        error_log('Triggered: ' . ($triggered ? 'YES' : 'NO'));
         foreach ($triggerPhrases as $phrase) {
             if (str_contains($replyLower, mb_strtolower($phrase))) {
                 $triggered = true;
                 break;
             }
         }
+        error_log('REPLY_LOWER: ' . substr($replyLower, 0, 300));
+        error_log('TRIGGERED: ' . ($triggered ? 'YES' : 'NO'));
 
         if ($triggered) {
             // Generate summary + extract lead data via AI
@@ -153,14 +161,28 @@ PROMPT;
                     $summary = $data['summary'] ?? $summaryContent;
 
                     $leadManager = new LeadManager($pdo);
-                    $leadManager->save($lead, $summary, $history);
+                    try {
+                        $leadManager->save($lead, $summary, $history);
+                        $_SESSION['lead_saved'] = true;
+                        $leadSaved = true; // flag untuk response
+                    } catch (\Exception $e) {
+                        error_log('Lead save error: ' . $e->getMessage());
+                        // Tampilkan di response tanpa crash chat
+                        echo json_encode([
+                            'reply' => $replyText,
+                            'error' => null,
+                            'debug_lead_error' => $e->getMessage()
+                        ]);
+                        exit;
+                    }
                     $_SESSION['lead_saved'] = true;
                 }
             }
         }
+        error_log('Lead triggered: ' . json_encode($data ?? 'no data'));
     }
 
-    echo json_encode(['reply' => $replyText, 'error' => null]);
+    echo json_encode(['reply' => $replyText, 'error' => null, 'lead_saved' => $leadSaved ?? false,]);
 
 } catch (Exception $e) {
     http_response_code(500);

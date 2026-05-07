@@ -35,6 +35,7 @@ class LeadManager
             json_encode($history, JSON_UNESCAPED_UNICODE),
         ]);
 
+        error_log('Lead saved with ID: ' . $this->pdo->lastInsertId());
         $leadId = $this->pdo->lastInsertId();
 
         // Kirim email ke semua recipients aktif
@@ -81,8 +82,8 @@ class LeadManager
 
             $mail->send();
         } catch (\Exception $e) {
-            // Log error tapi jangan sampai crash chat
             error_log('LeadManager email error: ' . $e->getMessage());
+            throw $e; // lempar ke atas biar keliatan di response
         }
     }
 
