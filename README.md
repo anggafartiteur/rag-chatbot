@@ -1,132 +1,130 @@
-# 🤖 RAG Chatbot – Neuron AI + PHP
+# 🤖 RAG Chatbot – Kemindo Group
 
-Chatbot sederhana berbasis **RAG (Retrieval-Augmented Generation)** menggunakan framework [Neuron AI](https://neuron-ai.dev) dan PHP. Chatbot ini bisa menjawab pertanyaan berdasarkan knowledge base kustom yang kamu berikan.
+A PHP-based RAG (Retrieval-Augmented Generation) chatbot powered by [Neuron AI](https://neuron-ai.dev), built for Kemindo Group to handle customer inquiries and capture leads automatically.
 
----
-
-## 📁 Struktur Project
-
-```
-rag-chatbot/
-├── src/
-│   └── Neuron/
-│       └── ChatBot.php        # Kelas RAG utama (Neuron AI)
-├── knowledge/
-│   └── produk-info.md         # Contoh dokumen knowledge base
-├── storage/
-│   └── vectors/               # Folder vector store (auto-dibuat)
-├── index.html                 # UI chat
-├── chat.php                   # API endpoint
-├── ingest.php                 # Script untuk load dokumen
-├── composer.json
-├── .env.example
-└── README.md
-```
+![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?style=flat&logo=php&logoColor=white)
+![Neuron AI](https://img.shields.io/badge/Neuron_AI-3.x-black?style=flat)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=flat&logo=bootstrap&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green?style=flat)
 
 ---
 
-## 🚀 Cara Setup
+## ✨ Features
 
-### 1. Install Dependencies
+### Chatbot
+- Answers questions based on your own knowledge base (RAG)
+- Multi-language support (Indonesian, English, Chinese)
+- Conversation memory within a session
+- Customizable persona, tone, language, and response style
+- New conversation button to reset session
 
+### Lead Capture
+- Automatically detects when a customer needs to be forwarded to sales
+- Collects name, company, WhatsApp, email, and intention
+- AI-generated conversation summary for the sales team
+- Saves leads to MySQL database
+- Sends email notification to sales team automatically
+
+### Dashboard (Login Protected)
+- **Overview** – stats, recent ingest logs
+- **Ingest** – manage data sources (file, MySQL, URL), manual ingest, auto-ingest scheduler
+- **Knowledge Base** – view indexed chunks, clear all
+- **Settings Bot** – configure persona, tone, language, topic limits, closing message
+- **Leads** – view all leads, update status (New/Contacted/Closed), resend email notification
+- **Email Recipients** – manage who receives lead notifications
+- **Account** – change username and password
+
+### Infrastructure
+- Support 8 LLM providers: Anthropic, OpenAI, Gemini, Mistral, Deepseek, XAI, Ollama, Cohere
+- Support 6 embedding providers: Voyage AI, OpenAI, Gemini, Mistral, Cohere, Ollama
+- File vector store (local, no external DB needed)
+- Auto-ingest via cron job with configurable interval
+- MySQL for settings, leads, and dashboard data
+
+---
+
+## 🚀 Quick Start
+
+### 1. Install dependencies
 ```bash
 composer install
 ```
 
-### 2. Konfigurasi Environment
-
+### 2. Configure environment
 ```bash
 cp .env.example .env
 ```
+Fill in your API keys and database credentials.
 
-Edit file `.env` dan isi API key kamu:
+### 3. Setup database
+Import `rag_chatbot.sql` via phpMyAdmin, then import `rag_chatbot_update.sql`.
 
-```env
-# Pilih provider LLM
-LLM_PROVIDER=openai          # atau: anthropic
+Default login: `admin` / `admin123` — **change immediately after login.**
 
-# OpenAI (dibutuhkan untuk embeddings)
-OPENAI_API_KEY=sk-xxxxxxxxxxxx
-OPENAI_MODEL=gpt-4o-mini
-OPENAI_EMBEDDING_MODEL=text-embedding-3-small
+### 4. Add knowledge base documents
+Put `.md`, `.txt`, or `.html` files in the `knowledge/` folder.
 
-# Anthropic (opsional, jika mau pakai Claude)
-ANTHROPIC_API_KEY=sk-ant-xxxxx
-ANTHROPIC_MODEL=claude-3-5-haiku-20241022
-```
-
-> **Catatan:** OpenAI API key **selalu dibutuhkan** karena digunakan untuk embeddings, bahkan jika kamu pakai Anthropic sebagai LLM.
-
-### 3. Tambahkan Dokumen Knowledge Base
-
-Taruh file `.txt`, `.md`, atau `.html` di folder `knowledge/`. Contoh sudah tersedia di `knowledge/produk-info.md`.
-
-### 4. Index Dokumen ke Vector Store
-
+### 5. Run ingest
 ```bash
 php ingest.php
 ```
+Or use the **Ingest** page in the dashboard.
 
-Atau untuk file/folder spesifik:
-
-```bash
-php ingest.php path/to/file.md
-php ingest.php path/to/folder/
-```
-
-### 5. Jalankan PHP Server
-
+### 6. Start server
 ```bash
 php -S localhost:8080
 ```
 
-Buka browser ke: **http://localhost:8080**
+Open **http://localhost:8080** for the chatbot, **http://localhost:8080/dashboard** for the admin panel.
 
 ---
 
-## 🔧 Cara Kerja
+## 📁 Project Structure
 
 ```
-Pertanyaan User
-      │
-      ▼
- [Neuron RAG]
-      │
-      ├─ 1. Ubah pertanyaan jadi vektor (embeddings)
-      ├─ 2. Cari dokumen relevan di vector store (similarity search)
-      ├─ 3. Tambahkan konteks dokumen ke prompt
-      └─ 4. Kirim ke LLM → dapat jawaban yang grounded
+rag-chatbot/
+├── src/
+│   ├── Neuron/ChatBot.php      # RAG core class
+│   └── LeadManager.php         # Lead saving & email notification
+├── dashboard/                  # Admin panel pages
+│   ├── includes/               # Auth, DB, header, footer helpers
+│   ├── home.php, ingest.php, knowledge.php
+│   ├── settings.php, leads.php, recipients.php, account.php
+├── api/                        # Internal API endpoints
+│   ├── ingest-run.php
+│   ├── resend-lead.php
+│   └── reset-session.php
+├── cron/
+│   └── auto-ingest.php         # Cron job for scheduled ingest
+├── knowledge/                  # Knowledge base documents
+├── storage/vectors/            # Vector store (auto-created)
+├── index.html                  # Chatbot UI
+├── chat.php                    # Chat API endpoint
+├── ingest.php                  # CLI ingest script
+├── install.php                 # One-time DB setup
+└── .env.example
 ```
 
 ---
 
-## 🧩 Komponen
+## 🔧 LLM & Embeddings Configuration
 
-| Komponen | Default | Alternatif |
+| Layer | Recommended | Notes |
 |---|---|---|
-| **LLM** | OpenAI GPT-4o-mini | Anthropic Claude |
-| **Embeddings** | OpenAI text-embedding-3-small | VoyageAI |
-| **Vector Store** | FileVectorStore (lokal) | Pinecone, PostgreSQL |
+| LLM | Anthropic Claude | Or OpenAI, Gemini, Mistral, etc. |
+| Embeddings | Voyage AI | Free 200M tokens/month — partner of Anthropic |
+| Vector Store | FileVectorStore | Local file, no DB needed |
 
 ---
 
-## 📝 Menambah Dokumen Baru
+## 📚 References
 
-1. Tambahkan file ke folder `knowledge/`
-2. Jalankan ulang: `php ingest.php`
-3. Chatbot langsung bisa menjawab tentang konten baru
-
----
-
-## 💡 Tips
-
-- **FileVectorStore** cocok untuk development dan demo. Untuk production, gunakan Pinecone atau PostgreSQL.
-- Pastikan dokumen dibuat dalam format yang jelas dan terstruktur agar RAG lebih akurat.
-- Jika jawaban kurang relevan, coba perbanyak dan perjelas isi dokumen knowledge base.
+- [Neuron AI Docs](https://docs.neuron-ai.dev)
+- [Voyage AI](https://www.voyageai.com)
+- [Anthropic API](https://docs.anthropic.com)
 
 ---
 
-## 📚 Referensi
+## 📄 License
 
-- [Neuron AI Documentation](https://docs.neuron-ai.dev)
-- [Neuron AI GitHub](https://github.com/neuron-core/neuron-ai)
+MIT

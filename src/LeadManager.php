@@ -58,10 +58,10 @@ class LeadManager
         try {
             // SMTP Config
             $mail->isSMTP();
-            $mail->SMTPDebug = 2;
-            $mail->Debugoutput = function($str, $level) {
-                error_log('SMTP DEBUG: ' . $str);
-            };
+            // $mail->SMTPDebug = 2;
+            // $mail->Debugoutput = function($str, $level) {
+            //     error_log('SMTP DEBUG: ' . $str);
+            // };
             $mail->Host       = $_ENV['SMTP_HOST'] ?? '';
             $mail->SMTPAuth   = true;
             $mail->Username   = $_ENV['SMTP_USER'] ?? '';
