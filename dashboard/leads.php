@@ -165,18 +165,24 @@ require_once __DIR__ . '/includes/header.php';
                                 </div>
                             </div>
 
-                            <!-- Update Status -->
-                            <form method="POST" class="d-flex align-items-center gap-2">
-                                <input type="hidden" name="action" value="update_status">
-                                <input type="hidden" name="id" value="<?= $lead['id'] ?>">
-                                <label class="form-label mb-0 small">Update Status:</label>
-                                <select name="status" class="form-select form-select-sm" style="width:auto">
-                                    <option value="new"       <?= $lead['status']==='new'?'selected':''       ?>>New</option>
-                                    <option value="contacted" <?= $lead['status']==='contacted'?'selected':'' ?>>Contacted</option>
-                                    <option value="closed"    <?= $lead['status']==='closed'?'selected':''    ?>>Closed</option>
-                                </select>
-                                <button class="btn btn-sm btn-primary">Simpan</button>
-                            </form>
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <!-- Update Status -->
+                                <form method="POST" class="d-flex align-items-center gap-2">
+                                    <input type="hidden" name="action" value="update_status">
+                                    <input type="hidden" name="id" value="<?= $lead['id'] ?>">
+                                    <label class="form-label mb-0 small">Update Status:</label>
+                                    <select name="status" class="form-select form-select-sm" style="width:auto">
+                                        <option value="new"       <?= $lead['status']==='new'?'selected':''       ?>>New</option>
+                                        <option value="contacted" <?= $lead['status']==='contacted'?'selected':'' ?>>Contacted</option>
+                                        <option value="closed"    <?= $lead['status']==='closed'?'selected':''    ?>>Closed</option>
+                                    </select>
+                                    <button class="btn btn-sm btn-primary">Simpan</button>
+                                </form>
+                                <!-- Resend Email -->
+                                <button class="btn btn-sm btn-outline-info" onclick="resendEmail(<?= $lead['id'] ?>, this)">
+                                    <i class="bi bi-envelope-arrow-up me-1"></i>Kirim Email ke Sales
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -188,4 +194,46 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 </div>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<!-- Toast Notification -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index:9999">
+    <div id="leadToast" class="toast align-items-center border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body" id="toastMsg"></div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+</div>
+
+<?php
+$extraJs = <<<JS
+async function resendEmail(leadId, btn) {
+    const originalHtml = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>Mengirim...';
+
+    try {
+        const res  = await fetch('../api/resend-lead.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ lead_id: leadId }),
+        });
+        const data = await res.json();
+        showToast(data.message, data.success ? 'success' : 'danger');
+    } catch(e) {
+        showToast('Gagal menghubungi server.', 'danger');
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = originalHtml;
+    }
+}
+
+function showToast(message, type) {
+    const toast   = document.getElementById('leadToast');
+    const toastMsg = document.getElementById('toastMsg');
+    toast.className = 'toast align-items-center border-0 text-bg-' + type;
+    toastMsg.textContent = message;
+    bootstrap.Toast.getOrCreateInstance(toast, { delay: 4000 }).show();
+}
+JS;
+require_once __DIR__ . '/includes/footer.php';
+?>
