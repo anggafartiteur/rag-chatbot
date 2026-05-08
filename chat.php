@@ -113,7 +113,7 @@ try {
                 break;
             }
         }
-        error_log('REPLY_LOWER: ' . substr($replyLower, 0, 300));
+        // error_log('REPLY_LOWER: ' . substr($replyLower, 0, 300));
         error_log('TRIGGERED: ' . ($triggered ? 'YES' : 'NO'));
 
         if ($triggered) {

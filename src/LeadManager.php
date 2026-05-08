@@ -1,5 +1,4 @@
 <?php
-
 namespace App;
 
 use PDO;
@@ -59,12 +58,23 @@ class LeadManager
         try {
             // SMTP Config
             $mail->isSMTP();
+            $mail->SMTPDebug = 2;
+            $mail->Debugoutput = function($str, $level) {
+                error_log('SMTP DEBUG: ' . $str);
+            };
             $mail->Host       = $_ENV['SMTP_HOST'] ?? '';
             $mail->SMTPAuth   = true;
             $mail->Username   = $_ENV['SMTP_USER'] ?? '';
             $mail->Password   = $_ENV['SMTP_PASS'] ?? '';
             $mail->SMTPSecure = $_ENV['SMTP_SECURE'] === 'tls' ? PHPMailer::ENCRYPTION_STARTTLS : PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port       = (int)($_ENV['SMTP_PORT'] ?? 465);
+            $mail->SMTPOptions = [
+                'ssl' => [
+                    'verify_peer'       => false,
+                    'verify_peer_name'  => false,
+                    'allow_self_signed' => true,
+                ],
+            ];
             $mail->CharSet    = 'UTF-8';
 
             // From
