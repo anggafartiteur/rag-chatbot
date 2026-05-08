@@ -301,3 +301,92 @@ untuk setiap inquiry harga atau produk, wajib kumpulkan: nama lengkap, perusahaa
 [06-May-2026 16:34:14 Asia/Jakarta] Lead saved with ID: 6
 [06-May-2026 16:34:14 Asia/Jakarta] LeadManager email error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
 [06-May-2026 16:34:14 Asia/Jakarta] Lead save error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
+14:06:02 REPLY: Halo! Terima kasih minat Anda pada **Aluminum Powder** dari Kemindo. 
+
+Berikut spesifikasi produk kami:
+
+| Parameter | Spesifikasi |
+|-----------|-------------|
+| Al₂O₃ Content | 17% Min |
+| Ferro
+[08-May-2026 14:06:03 Asia/Jakarta] Trigger check: halo! terima kasih minat anda pada **aluminum powder** dari kemindo. 
+
+berikut spesifikasi produk kami:
+
+| parameter | spesifikasi |
+|-----------|-------------|
+| al₂o₃ content | 17% min |
+| ferro oxide fe₂o₃ | 15.0 ppm max |
+| lead (pb) | 0.2 ppm max |
+| arsenic (as) | 0.005 ppb max |
+| ph solution at 25°c | 2 |
+
+produk ini tersedia dan cocok untuk berbagai aplikasi industri.
+
+untuk melanjutkan proses pembelian dan mendiskusikan harga serta detail order, saya memerlukan beberapa informasi dari anda:
+
+1. **nama lengkap anda?**
+2. **nama perusahaan?**
+3. **nomor whatsapp?**
+4. **alamat email?**
+5. **berapa jumlah/volume yang anda butuhkan?**
+
+setelah informasi terkumpul, tim sales kemindo akan menghubungi anda segera untuk negosiasi harga dan detail pengiriman.
+
+**untuk setiap inquiry harga atau produk, wajib kumpulkan: nama lengkap, perusahaan, nomor whatsapp, dan email sebelum meneruskan ke tim sales.**
+[08-May-2026 14:06:03 Asia/Jakarta] Triggered: NO
+[08-May-2026 14:06:03 Asia/Jakarta] REPLY_LOWER: halo! terima kasih minat anda pada **aluminum powder** dari kemindo. 
+
+berikut spesifikasi produk kami:
+
+| parameter | spesifikasi |
+|-----------|-------------|
+| al₂o₃ content | 17% min |
+| ferro oxide fe₂o₃ | 15.0 ppm max |
+| lead (pb) | 0.2 ppm max |
+| arsenic (as) | 0.005 ppb max |
+| ph 
+[08-May-2026 14:06:03 Asia/Jakarta] TRIGGERED: YES
+[08-May-2026 14:06:05 Asia/Jakarta] Lead saved with ID: 7
+[08-May-2026 14:06:06 Asia/Jakarta] LeadManager email error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
+[08-May-2026 14:06:06 Asia/Jakarta] Lead save error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
+14:07:02 REPLY: Terima kasih informasinya, Anwar! Saya catat data Anda:
+
+- **Nama Lengkap:** Anwar
+- **Perusahaan:** PT BSI
+- **Nomor WhatsApp:** 0898989898
+- **Email:** anwar@bsi.co.id
+- **Kebutuhan:** Aluminum Powd
+[08-May-2026 14:07:02 Asia/Jakarta] Trigger check: terima kasih informasinya, anwar! saya catat data anda:
+
+- **nama lengkap:** anwar
+- **perusahaan:** pt bsi
+- **nomor whatsapp:** 0898989898
+- **email:** anwar@bsi.co.id
+- **kebutuhan:** aluminum powder dengan al₂o₃ content 20% untuk 2 minggu ke depan
+
+**catatan penting:** spesifikasi aluminum powder kemindo standar memiliki al₂o₃ content **17% min**. kebutuhan anda untuk 20% adalah spesifikasi khusus yang perlu didiskusikan lebih lanjut dengan tim sales kami.
+
+✅ **informasi anda telah dicatat dan akan diteruskan ke tim sales kemindo.** tim sales akan segera menghubungi anda melalui whatsapp atau email untuk:
+- membahas spesifikasi khusus (al₂o₃ 20%)
+- negosiasi harga
+- konfirmasi jumlah dan timeline pengiriman
+- penawaran terbaik untuk kebutuhan anda
+
+terima kasih telah memilih kemindo! 🙏
+
+**untuk setiap inquiry harga atau produk, wajib kumpulkan: nama lengkap, perusahaan, nomor whatsapp, dan email sebelum meneruskan ke tim sales.**
+[08-May-2026 14:07:02 Asia/Jakarta] Triggered: NO
+[08-May-2026 14:07:02 Asia/Jakarta] REPLY_LOWER: terima kasih informasinya, anwar! saya catat data anda:
+
+- **nama lengkap:** anwar
+- **perusahaan:** pt bsi
+- **nomor whatsapp:** 0898989898
+- **email:** anwar@bsi.co.id
+- **kebutuhan:** aluminum powder dengan al₂o₃ content 20% untuk 2 minggu ke depan
+
+**catatan penting:** spesifikasi aluminum p
+[08-May-2026 14:07:02 Asia/Jakarta] TRIGGERED: YES
+[08-May-2026 14:07:06 Asia/Jakarta] Lead saved with ID: 8
+[08-May-2026 14:07:06 Asia/Jakarta] LeadManager email error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
+[08-May-2026 14:07:06 Asia/Jakarta] Lead save error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
