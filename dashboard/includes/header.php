@@ -120,6 +120,9 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
         <a href="<?= BASE_URL ?>/dashboard/knowledge.php" class="nav-link <?= $currentPage==='knowledge'?'active':'' ?>">
             <i class="bi bi-journals"></i> Knowledge Base
         </a>
+        <a href="<?= BASE_URL ?>/dashboard/knowledge-editor.php" class="nav-link <?= $currentPage==='knowledge-editor'?'active':'' ?>">
+            <i class="bi bi-pencil-square"></i> Knowledge Editor
+        </a>
         <a href="<?= BASE_URL ?>/dashboard/settings.php" class="nav-link <?= $currentPage==='settings'?'active':'' ?>">
             <i class="bi bi-gear-fill"></i> Settings Bot
         </a>

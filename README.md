@@ -25,6 +25,8 @@ A PHP-based RAG (Retrieval-Augmented Generation) chatbot powered by [Neuron AI](
 - Saves leads to MySQL database
 - Sends email notification to sales team automatically
 
+**tumben banget kamu baca readme"**
+
 ### Dashboard (Login Protected)
 - **Overview** – stats, recent ingest logs
 - **Ingest** – manage data sources (file, MySQL, URL), manual ingest, auto-ingest scheduler
