@@ -1,11 +1,10 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
-ini_set('error_log', 'C:/xampp/htdocs/rag-chatbot/debug.log');
-ini_set('log_errors', '1');
 require_once __DIR__ . '/vendor/autoload.php';
 
 use App\Neuron\ChatBot;
 use App\LeadManager;
+use App\RateLimiter;
 use NeuronAI\Chat\Messages\UserMessage;
 use NeuronAI\Chat\Messages\AssistantMessage;
 use Dotenv\Dotenv;
@@ -35,7 +34,7 @@ if (empty($userMessage)) {
 }
 
 // ── Koneksi DB ───────────────────────────────────────────
-$pdo = null;
+$pdo      = null;
 $settings = [];
 try {
     $host = $_ENV['DB_HOST'] ?? 'localhost';
@@ -49,6 +48,27 @@ try {
     foreach ($rows as $row) $settings[$row['key']] = $row['value'];
 } catch (Exception $e) {
     // lanjut dengan settings kosong
+}
+
+// ── Rate Limiting ────────────────────────────────────────
+if ($pdo) {
+    $ip        = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+    $whitelist = array_filter(array_map('trim', explode(',', $_ENV['RATE_LIMIT_WHITELIST'] ?? '')));
+
+    if (!in_array($ip, $whitelist)) {
+        $maxRequests   = (int)($settings['rate_limit_chat_max']    ?? $_ENV['RATE_LIMIT_CHAT_MAX']    ?? 20);
+        $windowMinutes = (int)($settings['rate_limit_chat_window'] ?? $_ENV['RATE_LIMIT_CHAT_WINDOW'] ?? 10);
+
+        $limiter = new RateLimiter($pdo);
+        if (!$limiter->check('chat', $maxRequests, $windowMinutes)) {
+            http_response_code(429);
+            echo json_encode([
+                'reply' => null,
+                'error' => "Terlalu banyak permintaan. Silakan tunggu {$windowMinutes} menit sebelum mencoba lagi.",
+            ]);
+            exit;
+        }
+    }
 }
 
 // ── Session history ──────────────────────────────────────
@@ -76,9 +96,8 @@ try {
     }
     $messages[] = new UserMessage($userMessage);
 
-    $response = $bot->chat($messages)->getMessage();
-    $replyText   = $response->getContent();
-    file_put_contents(__DIR__ . '/debug.log', date('H:i:s') . ' REPLY: ' . substr($replyText, 0, 200) . "\n", FILE_APPEND);
+    $response  = $bot->chat($messages)->getMessage();
+    $replyText = $response->getContent();
 
     // Simpan ke history
     $history[] = ['role' => 'user',      'content' => $userMessage];
@@ -105,26 +124,26 @@ try {
 
         $replyLower = mb_strtolower($replyText);
         $triggered  = false;
-        error_log('Trigger check: ' . $replyLower);
-        error_log('Triggered: ' . ($triggered ? 'YES' : 'NO'));
         foreach ($triggerPhrases as $phrase) {
             if (str_contains($replyLower, mb_strtolower($phrase))) {
                 $triggered = true;
                 break;
             }
         }
-        // error_log('REPLY_LOWER: ' . substr($replyLower, 0, 300));
-        error_log('TRIGGERED: ' . ($triggered ? 'YES' : 'NO'));
+
+        file_put_contents(__DIR__ . '/debug.log',
+            date('Y-m-d H:i:s') . ' TRIGGERED: ' . ($triggered ? 'YES' : 'NO') . "\n",
+            FILE_APPEND
+        );
 
         if ($triggered) {
-            // Generate summary + extract lead data via AI
             $historyText = '';
             foreach ($history as $h) {
                 $role = $h['role'] === 'user' ? 'Customer' : 'Chatbot';
                 $historyText .= "{$role}: {$h['content']}\n\n";
             }
 
-            $summaryBot = ChatBot::make()->withSettings([]);
+            $summaryBot    = ChatBot::make()->withSettings([]);
             $summaryPrompt = <<<PROMPT
 Based on this conversation, extract the following in JSON format (no markdown, just raw JSON):
 {
@@ -164,25 +183,21 @@ PROMPT;
                     try {
                         $leadManager->save($lead, $summary, $history);
                         $_SESSION['lead_saved'] = true;
-                        $leadSaved = true; // flag untuk response
+                        $leadSaved = true;
                     } catch (\Exception $e) {
                         error_log('Lead save error: ' . $e->getMessage());
-                        // Tampilkan di response tanpa crash chat
-                        echo json_encode([
-                            'reply' => $replyText,
-                            'error' => null,
-                            'debug_lead_error' => $e->getMessage()
-                        ]);
-                        exit;
                     }
                     $_SESSION['lead_saved'] = true;
                 }
             }
         }
-        error_log('Lead triggered: ' . json_encode($data ?? 'no data'));
     }
 
-    echo json_encode(['reply' => $replyText, 'error' => null, 'lead_saved' => $leadSaved ?? false,]);
+    echo json_encode([
+        'reply'      => $replyText,
+        'error'      => null,
+        'lead_saved' => $leadSaved ?? false,
+    ]);
 
 } catch (Exception $e) {
     http_response_code(500);
