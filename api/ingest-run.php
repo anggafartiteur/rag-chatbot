@@ -27,12 +27,33 @@ $pass = $_ENV['DB_PASS'] ?? '';
 $pdo  = new PDO("mysql:host={$host};port={$port};dbname={$name};charset=utf8mb4", $user, $pass,
     [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]);
 
+// ── Rate Limiting ────────────────────────────────────────
+$ip        = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+$whitelist = array_filter(array_map('trim', explode(',', $_ENV['RATE_LIMIT_WHITELIST'] ?? '')));
+
+if (!in_array($ip, $whitelist)) {
+    $maxRequests   = (int)($_ENV['RATE_LIMIT_INGEST_MAX']    ?? 5);
+    $windowMinutes = (int)($_ENV['RATE_LIMIT_INGEST_WINDOW'] ?? 10);
+
+    $limiter = new \App\RateLimiter($pdo);
+    if (!$limiter->check('ingest', $maxRequests, $windowMinutes)) {
+        echo json_encode([
+            'success' => false,
+            'message' => "Terlalu banyak permintaan. Tunggu {$windowMinutes} menit.",
+        ]);
+        exit;
+    }
+}
+// ── End Rate Limiting ────────────────────────────────────
+
 $sources = $pdo->query("SELECT * FROM ingest_sources WHERE enabled=1")->fetchAll();
 
 if (empty($sources)) {
     echo json_encode(['success' => false, 'message' => 'Tidak ada sumber aktif. Tambahkan sumber di halaman Ingest.']);
     exit;
 }
+
+
 
 // Override VECTOR_STORE_DIR ke path absolut dari root project
 $_ENV['VECTOR_STORE_DIR'] = dirname(__DIR__) . '/storage/vectors';
